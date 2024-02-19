@@ -1,8 +1,12 @@
 // TODO: write your code here
-import isHealthy from './basic';
+import sortArray from './basic';
 
-let mage = {name: 'Маг', health: 90};
+let mages = [
+    {name: 'мечник', health: 10},
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+  ]
 
 console.log('worked');
 
-console.log(isHealthy(mage));
+console.log(sortArray(mages));

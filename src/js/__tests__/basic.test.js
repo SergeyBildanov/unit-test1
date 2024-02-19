@@ -1,10 +1,15 @@
-import isHealthy from '../basic';
+import sortArray from '../basic';
 
-test.each([
-  ["маг",90, "healthy"],
-  ["маг",40, "wounded"],
-  ["маг",10, "critical"],
-])("testing health fucn for %s with %i HP", (name, health, expected)=>{
-  const result = isHealthy({name, health});
-  expect(result).toBe(name + expected);
+test('should sort', () => {
+  const result = sortArray([
+    {name: 'мечник', health: 10},
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+  ]);
+
+  expect(result).toEqual([
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+    {name: 'мечник', health: 10},
+  ]);
 });

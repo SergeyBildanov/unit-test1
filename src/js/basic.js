@@ -1,9 +1,4 @@
-export default function isHealthy({name, health}) {
-  if(health > 50){
-    return name + "healthy";
-  }
-  if(health > 15){
-    return name + "wounded";
-  }
-  return name + "critical";
+export default function sortArray(arr) {
+  arr.sort((a,b) => b.health - a.health);
+  return arr;
 }
